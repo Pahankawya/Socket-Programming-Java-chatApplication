@@ -53,7 +53,6 @@ public class ClientFormController extends Thread {
         try {
             while (true) {
 
-
                 String msg = reader.readLine();
                 String[] tokens = msg.split(" ");
                 String cmd = tokens[0];
