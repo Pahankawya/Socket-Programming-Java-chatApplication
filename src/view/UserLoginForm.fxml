@@ -11,21 +11,21 @@
 
 <AnchorPane fx:id="loginFormContext" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserLoginFormController">
 <children>
-    <TextField fx:id="txtUserName" layoutX="83.0" layoutY="257.0" prefHeight="25.0" prefWidth="435.0" />
-    <Label layoutX="83.0" layoutY="227.0" prefHeight="11.0" prefWidth="131.0" text="Enter Your Name Here">
+    <TextField fx:id="txtUserName" layoutX="84.0" layoutY="245.0" prefHeight="25.0" prefWidth="435.0" />
+    <Label layoutX="84.0" layoutY="217.0" prefHeight="11.0" prefWidth="131.0" text="Enter Your Name Here">
         <font>
             <Font size="13.0" />
         </font>
     </Label>
-    <Button layoutX="252.0" layoutY="303.0" mnemonicParsing="false" onAction="#LogInAction" prefHeight="29.0" prefWidth="96.0" style="-fx-background-color: #89CFEF;" text="Log In" textFill="WHITE">
+    <Button layoutX="250.0" layoutY="283.0" mnemonicParsing="false" onAction="#LogInAction" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #89CFEF;" text="Log In" textFill="WHITE">
         <font>
-            <Font name="System Bold" size="12.0" />
+            <Font name="System Bold" size="15.0" />
         </font>
         <cursor>
             <Cursor fx:constant="HAND" />
         </cursor>
     </Button>
-      <ImageView fitHeight="157.0" fitWidth="156.0" layoutX="225.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="204.0" layoutX="228.0" layoutY="58.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../assets/transparent-person-icon-png-png-download-kindpng-removebg-preview.png" />
          </image>

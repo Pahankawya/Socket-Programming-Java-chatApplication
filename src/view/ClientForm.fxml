@@ -14,12 +14,12 @@
    <children>
       <AnchorPane layoutY="-2.0" prefHeight="71.0" prefWidth="551.0" style="-fx-background-color: #89CFEF;">
          <children>
-            <ImageView fitHeight="50.0" fitWidth="92.0" layoutX="472.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="50.0" fitWidth="92.0" layoutX="458.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../assets/image-removebg-preview.png" />
                </image>
             </ImageView>
-            <Label fx:id="lblClientName" layoutX="379.0" layoutY="24.0" text="Client Name">
+            <Label fx:id="lblClientName" layoutX="374.0" layoutY="23.0" text="Client Name">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

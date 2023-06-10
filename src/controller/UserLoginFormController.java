@@ -15,7 +15,7 @@ public class UserLoginFormController {
     static String userName;
 
     public void LogInAction(ActionEvent actionEvent) throws IOException {
-        userName=txtUserName.getText();
+        userName = txtUserName.getText();
         Stage stage = new Stage();
         stage.setScene(new Scene(FXMLLoader.load(UserLoginFormController.class.getResource("../view/ClientForm.fxml"))));
         stage.close();
@@ -23,5 +23,4 @@ public class UserLoginFormController {
         stage.show();
     }
 }
-
 
