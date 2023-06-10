@@ -34,10 +34,10 @@ public class ClientFormController extends Thread {
     private File filePath;
 
     public void initialize() throws IOException {
-        String userName=UserLoginFormController.userName;
+        String userName = UserLoginFormController.userName;
         lblClientName.setText(userName);
         try {
-            socket = new Socket("localhost", 6000);
+            socket = new Socket("localhost", 6001);
             System.out.println("Socket is connected with server!");
             reader = new BufferedReader(new InputStreamReader(socket.getInputStream()));
             writer = new PrintWriter(socket.getOutputStream(), true);
@@ -61,7 +61,7 @@ public class ClientFormController extends Thread {
 
                 StringBuilder fullMsg = new StringBuilder();
                 for (int i = 1; i < tokens.length; i++) {
-                    fullMsg.append(tokens[i]+" ");
+                    fullMsg.append(tokens[i] + " ");
                 }
 
 
@@ -81,7 +81,7 @@ public class ClientFormController extends Thread {
 
 
                 if (firstChars.equalsIgnoreCase("img")) {
-                    //for the Images
+                    //the Images
 
                     st = st.substring(3, st.length() - 1);
 
@@ -138,8 +138,6 @@ public class ClientFormController extends Thread {
                     HBox hBox = new HBox(12); //12
 
 
-
-
                     if (!cmd.equalsIgnoreCase(lblClientName.getText() + ":")) {
 
 
@@ -164,18 +162,6 @@ public class ClientFormController extends Thread {
         }
     }
 
-    public void msgSendOnAction(ActionEvent actionEvent) {
-        String msg = txtMsg.getText();
-        writer.println(lblClientName.getText() + ": " + msg);
-
-        txtMsg.clear();
-
-        if(msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("logout"))) {
-            System.exit(0);
-
-        }
-    }
-
     public void ImageMouseClicked(MouseEvent mouseEvent) {
         Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
         fileChooser = new FileChooser();
@@ -183,4 +169,18 @@ public class ClientFormController extends Thread {
         this.filePath = fileChooser.showOpenDialog(stage);
         writer.println(lblClientName.getText() + " " + "img" + filePath.getPath());
     }
+
+
+    public void msgSendOnAction(ActionEvent actionEvent) {
+        String msg = txtMsg.getText();
+        writer.println(lblClientName.getText() + ": " + msg);
+
+        txtMsg.clear();
+
+        if (msg.equalsIgnoreCase("BYE") || (msg.equalsIgnoreCase("Logout"))) {
+            System.exit(0);
+
+        }
+    }
 }
+
